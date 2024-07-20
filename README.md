@@ -1,2 +1,2 @@
-# FastFeast
+# EasyEats
  Food ordering app
