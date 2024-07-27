@@ -1,0 +1,30 @@
+{
+  "name": "fastfeast",
+  "version": "1.0.0",
+  "description": "Food ordering app or webapp",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/NiyaRakhewar/EasyEats)"
+  },
+  "keywords": [
+    "react",
+    "javascript"
+  ],
+  "author": "Niharika Rakhewar",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.25.1"
+  }
+}
