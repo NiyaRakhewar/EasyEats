@@ -9,7 +9,7 @@ console.log(err)
         <h1>Oops !! </h1>
         <h1> Something gets wrong!!</h1>
         <h3>
-            {err.error.message}: {err.statusText}
+            {err?.error?.message}: {err?.statusText}
         </h3>
     </div>
   )
