@@ -13,3 +13,13 @@ export const RestaurantCard = ({restroData})=>{
       </div>
     )
   }
+
+
+export const WithPromotionCard = (RestaurantCard) =>{
+  return (props)=>{
+    return <div>
+      <label className="absolute bg-black text-white m-2 p-2 rounded-lg">Promoted</label>
+      <RestaurantCard  {...props} />
+    </div>
+  }
+}

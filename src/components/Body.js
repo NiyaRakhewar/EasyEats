@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RestaurantCard } from "./RestaurantCard";
+import { RestaurantCard, WithPromotionCard } from "./RestaurantCard";
 import { Shimmer } from "./Shimmer";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
@@ -11,6 +11,9 @@ export const Body = () => {
 const [searchText, setSearchText] = useState("")
 
 const  _ = require("lodash")
+
+const RestaurantCardWithPromoted = WithPromotionCard(RestaurantCard)
+
   useEffect(() => {
     fetchData();
     console.log("useeffect")
@@ -60,8 +63,8 @@ console.log(restro?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" className="search-box" onChange={(e)=>setSearchText(e.target.value)}/>
-          <button onClick={()=>{
+          <input type="text" className="m-2 px-4 border border-black" onChange={(e)=>setSearchText(e.target.value)}/>
+          <button className="ml-2 px-2 border border-black bg-slate-200 rounded-lg "onClick={()=>{
            const filteredData =  listOfRestaurants?.filter(
               (data) => data?.info?.name.toLowerCase().includes(searchText.toLowerCase())
             )
@@ -82,7 +85,7 @@ console.log(restro?.card?.card?.gridElements?.infoWithStyle?.restaurants)
       </div>
       <div className="restro-container">
         {filterListOfRestaurants?.map((res, i) => (
-         <Link to={`/restaurants/${res?.info?.id}`}> <RestaurantCard key={res?.info?.id} restroData={res} /></Link>
+         <Link key={res?.info?.id} to={`/restaurants/${res?.info?.id}`}> {res?.info?.avgRating > 4 ? <RestaurantCardWithPromoted  restroData={res}  />:<RestaurantCard  restroData={res} />}</Link>
         ))}
       </div>
     </div>

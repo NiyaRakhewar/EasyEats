@@ -4,3 +4,7 @@ export const LOGO_URL =  'https://img.freepik.com/premium-vector/food-ordering-a
 
 
 export const MENU_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.592736196929003&lng=73.7910704254773&restaurantId="
+
+
+export const RESTAURANT_API =
+  "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING";
