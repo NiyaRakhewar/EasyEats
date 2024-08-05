@@ -48,7 +48,7 @@ export const Body = () => {
     <Shimmer />
   ) : (
     <div>
-      <div className="h-[100px]"></div>
+      {/* <div className="h-[100px]"></div> */}
 
 <div className="mx-8">
 <div >

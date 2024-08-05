@@ -15,6 +15,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
+      <div className="h-[80px]"></div>
       <Outlet />
     </div>
   );

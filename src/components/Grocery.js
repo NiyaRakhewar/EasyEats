@@ -2,7 +2,9 @@ import React from 'react'
 
 const Grocery = () => {
   return (
-    <div>Grocery</div>
+    <div>
+      <div className="h-[60px]"></div>
+      Grocery</div>
   )
 }
 

@@ -7,7 +7,7 @@ export const Header = () => {
   const onlineStatus = useOnlineStatus();
   const [loginFlag, setLoginFlag] = useState(true);
   return (
-    <div className="fixed z-40 w-full flex justify-between bg-lime-100 shadow-lg">
+    <div className="fixed z-40 w-full flex justify-between bg-lime-100 shadow-lg px-3">
       <div>
         {/* <h4 className="w-50 h-50">🍜</h4> */}
         <img
@@ -38,9 +38,9 @@ export const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className="px-4">Cart</li>
-          <button className="px-4" onClick={() => setLoginFlag(!loginFlag)}>
-            {loginFlag ? "Login" : "Logout"}
-          </button>
+          <h1 className="px-4" onClick={() => setLoginFlag(!loginFlag)}>
+            {loginFlag ? " Login " : "Logout"}
+          </h1>
         </ul>
       </div>
     </div>
