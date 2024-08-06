@@ -13,7 +13,7 @@ export const RestaurantCard = ({ restroData }) => {
         src={CDN_URL + info?.cloudinaryImageId}
       />
      
-     <div  className="absolute flex items-center my-[-16]  px-1 bg-lime-800 rounded-lg text-white text-sm"><h2>⭐</h2><h2> {info?.avgRatingString }</h2> <h4 className="pl-1 "> ({info?.totalRatingsString})</h4> </div>
+     <div  className="absolute flex items-center my-[-16]  px-1 bg-[#28a745] rounded-lg text-white text-sm"><h2>⭐</h2><h2> {info?.avgRatingString }</h2> <h4 className="pl-1 "> ({info?.totalRatingsString})</h4> </div>
       <div className="py-2 px-4">
         <h1 className="text-black-800 font-bold py-1  w-50 overflow-hidden overflow-ellipsis whitespace-nowrap">{info?.name}</h1>
         <h4 className="text-xs w-50 overflow-hidden overflow-ellipsis whitespace-nowrap">

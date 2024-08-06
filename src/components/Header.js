@@ -7,13 +7,13 @@ export const Header = () => {
   const onlineStatus = useOnlineStatus();
   const [loginFlag, setLoginFlag] = useState(true);
   return (
-    <div className="fixed z-40 w-full flex justify-between bg-lime-100 shadow-lg px-3">
+    <div className="fixed z-40 w-full flex justify-between bg-slate-50 dark:bg-slate-600 shadow-lg px-3">
       <div>
         {/* <h4 className="w-50 h-50">🍜</h4> */}
-        <img
+        <Link to="/"><img
           className="w-16 m-2 rounded-full cursor-pointer hover:scale-105 transition duration-300 "
           src={LOGO}
-        />
+        /></Link>
       </div>
       <div className="flex items-center font-semibold">
         <ul className="flex">
@@ -25,9 +25,7 @@ export const Header = () => {
               <HiOutlineStatusOffline />
             )}
           </li>
-          <li className="px-4">
-            <Link to="/">Home</Link>
-          </li>
+         
           <li className="px-4">
             <Link to="/about">About</Link>
           </li>
@@ -38,7 +36,7 @@ export const Header = () => {
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className="px-4">Cart</li>
-          <h1 className="px-4" onClick={() => setLoginFlag(!loginFlag)}>
+          <h1 className="px-4 cursor-pointer" onClick={() => setLoginFlag(!loginFlag)}>
             {loginFlag ? " Login " : "Logout"}
           </h1>
         </ul>

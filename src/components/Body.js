@@ -54,7 +54,8 @@ export const Body = () => {
 <div >
         <Dishes dishesData={APIData?.cards[0]?.card?.card} />
         <hr className="m-6" />
-        <TopRestaurants topResData={APIData?.cards[1]?.card?.card} />
+
+        <TopRestaurants topResData={APIData?.cards[4]?.card?.card} />
         <hr className="m-6" />
         <AllRestaurants allResData={APIData} />
       </div>

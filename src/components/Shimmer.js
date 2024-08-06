@@ -2,7 +2,7 @@ import React from 'react'
 import Loader from '../utils/Loader'
 export const Shimmer = () => {
   return (
-    <div className=''>
+    <div className='relative '>
       <div className='flex flex-col justify-center items-center h-[230px] bg-slate-600'>
         <div className='mt-20 rounded-full '><Loader /></div>
         

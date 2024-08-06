@@ -8,6 +8,7 @@ import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
 import { RestaurantMenu } from "./components/RestaurantMenu";
 import { Shimmer } from "./components/Shimmer";
+import { Footer } from "./components/Footer";
 // import { Grocery } from './components/Grocery'
 
 const Grocery  = lazy(() => import("./components/Grocery"));
@@ -17,6 +18,7 @@ const AppLayout = () => {
       <Header />
       <div className="h-[80px]"></div>
       <Outlet />
+      <Footer/>
     </div>
   );
 };
