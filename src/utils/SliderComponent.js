@@ -8,9 +8,9 @@ import './styles.css'; // Import custom styles for the slider
 function SliderComponent({code, dotsFlag,slideShowCount }) {
     const settings = {
         dots: dotsFlag,
-        infinite: true,
+        infinite: false,
         speed: 500,
-        slidesToShow: slideShowCount ? slideShowCount: 5,
+        slidesToShow: slideShowCount ? slideShowCount: 4.5,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />,
@@ -27,16 +27,29 @@ function SliderComponent({code, dotsFlag,slideShowCount }) {
               slidesToShow: slideShowCount? slideShowCount - 4 :  3,
             },
           },
+         
           {
-            breakpoint: 768,
+            breakpoint: 968,
+            settings: {
+              slidesToShow: slideShowCount? slideShowCount - 5 : 2.3,
+            },
+          },
+          {
+            breakpoint: 838,
             settings: {
               slidesToShow: slideShowCount? slideShowCount - 6 : 2,
             },
           },
           {
-            breakpoint: 480,
+            breakpoint: 720,
             settings: {
-              slidesToShow: slideShowCount? slideShowCount - 8 : 1,
+              slidesToShow: slideShowCount? slideShowCount - 6 : 1.5,
+            },
+          },
+          {
+            breakpoint: 580,
+            settings: {
+              slidesToShow: slideShowCount? slideShowCount - 7 : 1,
             },
           },
         ],

@@ -12,8 +12,7 @@ export const Dishes = ({ dishesData }) => {
       <div className="flex justify-between mt-3">
         <h1 className="font-bold text-xl ">{title}</h1>
       </div>
-      {/* <div className="relative px-4 ">
-        <div className="flex overflow-x-scroll custom-scrollbar space-x-2"> */}
+
       <diV className="mx-2">
         <SliderComponent
           code={dishes?.map((dish) => {
@@ -31,7 +30,5 @@ export const Dishes = ({ dishesData }) => {
         />
       </diV>
     </div>
-    //   </div>
-    // </div>
   );
 };

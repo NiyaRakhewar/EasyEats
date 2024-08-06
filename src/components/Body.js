@@ -50,7 +50,7 @@ export const Body = () => {
     <div>
       {/* <div className="h-[100px]"></div> */}
 
-<div className="mx-8">
+<div className="mx-20">
 <div >
         <Dishes dishesData={APIData?.cards[0]?.card?.card} />
         <hr className="m-6" />
