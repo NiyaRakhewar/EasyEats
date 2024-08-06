@@ -15,7 +15,7 @@ export const TopRestaurants = ({ topResData }) => {
       <h1 className="font-bold text-xl mx-1 ">{title}</h1>
 
       <div className="relative p-4">
-        <div className="flex overflow-x-scroll custom-scrollbar space-x-4 ">
+        <div className="flex overflow-x-scroll custom-scrollbar space-x-2 ">
           {/* <div className="flex overflow-x-scroll scrollbar-hide p-4 space-x-4"> */}
           {restaurantData?.map((res, i) => (
             <Link key={res?.info?.id} to={`/restaurants/${res?.info?.id}`} className="mb-2">

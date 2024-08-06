@@ -15,7 +15,7 @@ export const Shimmer = () => {
     
         <div className='flex flex-wrap m-4 justify-center'>
       {[1,2,3,4,5,6,7,8,9,10].map(i=>{
-  return  <div className='w-[250px] h-[250px] bg-gray-200 m-2 border rounded-md '></div>
+  return  <div key={i} className='w-[250px] h-[250px] bg-gray-200 m-2 border rounded-md '></div>
       })}
     </div>
     </div>

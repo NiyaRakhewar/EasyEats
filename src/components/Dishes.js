@@ -20,7 +20,7 @@ export const Dishes = ({ dishesData }) => {
         {dishes?.map((dish) => {
           return (
             // <div key={dish?.id} className="">
-              <img 
+              <img key={dish?.id}
                 alt="img"
                 src={DISHES_URL + "/" + dish?.imageId}
                 className="w-24 cursor-pointer transform hover:scale-110 transition duration-300 ease-in-out m-2"
