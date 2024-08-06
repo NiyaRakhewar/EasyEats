@@ -35,3 +35,7 @@
 
 
 
+.react-accessible-accordion__panel--hidden {
+  display: none;
+}
+

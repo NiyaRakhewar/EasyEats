@@ -9,7 +9,7 @@ function SliderComponent({code, dotsFlag,slideShowCount }) {
     const settings = {
         dots: dotsFlag,
         infinite: false,
-        speed: 500,
+        speed: 300,
         slidesToShow: slideShowCount ? slideShowCount: 4.5,
         slidesToScroll: 1,
         nextArrow: <SampleNextArrow />,

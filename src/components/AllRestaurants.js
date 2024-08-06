@@ -75,8 +75,8 @@ const RestaurantCardWithPromoted = WithPromotionCard(RestaurantCard)
   return (
     <div className="">
       <div className="filter">
-     
-       <h1 className="font-bold text-xl m-1">{title}</h1>
+      <h1 className="font-bold text-xl m-2 text-center">{title}</h1>
+
       </div>
 <div>
 <div className=''>

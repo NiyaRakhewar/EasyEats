@@ -13,7 +13,7 @@ export const Dishes = ({ dishesData }) => {
         <h1 className="font-bold text-xl ">{title}</h1>
       </div>
 
-      <diV className="mx-2">
+      <div className="mx-2">
         <SliderComponent
           code={dishes?.map((dish) => {
             return (
@@ -28,7 +28,7 @@ export const Dishes = ({ dishesData }) => {
           dotsFlag={false}
           slideShowCount={10}
         />
-      </diV>
+      </div>
     </div>
   );
 };

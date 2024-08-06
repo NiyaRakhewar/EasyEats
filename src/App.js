@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import { About } from "./components/About";
 import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
-import { RestaurantMenu } from "./components/RestaurantMenu";
+import { RestaurantMenu } from "./components/restaurantManu/RestaurantMenu";
 import { Shimmer } from "./components/Shimmer";
 import { Footer } from "./components/Footer";
 // import { Grocery } from './components/Grocery'
@@ -14,10 +14,12 @@ import { Footer } from "./components/Footer";
 const Grocery  = lazy(() => import("./components/Grocery"));
 const AppLayout = () => {
   return (
-    <div className="app">
+    <div className="flex flex-col min-h-screen">
+      <div className="flex-grow">
       <Header />
       <div className="h-[80px]"></div>
       <Outlet />
+      </div>
       <Footer/>
     </div>
   );
