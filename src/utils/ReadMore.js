@@ -8,7 +8,7 @@ const ReadMore = ({ text, maxCharacterCount }) => {
   };
 
   return (
-    text?.length > 100 ? <div className='text-sm text-opacity-90 text-slate-600'>
+    text?.length > 120 ? <div className='text-sm text-opacity-90 text-slate-600'>
       {isExpanded ? text : `${text.slice(0, maxCharacterCount)}...`}
       <span
         onClick={toggleReadMore}

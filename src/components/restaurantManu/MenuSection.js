@@ -59,7 +59,7 @@ const MenuSection = ({ section, sectionIndex, isOpen, onToggle }) => {
                             </h3>}
                             <ReadMore
                               text={itemData?.description}
-                              maxCharacterCount={150}
+                              maxCharacterCount={120}
                             />
                           </div>
                           <div className="flex flex-col items-center justify-center w-[30%] ">
