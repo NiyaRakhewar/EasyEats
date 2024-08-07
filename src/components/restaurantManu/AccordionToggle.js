@@ -5,7 +5,7 @@ const AccordionToggle = ({ isOpen, onClick, title, count }) => (
     className="py-4 px-2 text-left w-full flex justify-between items-center focus:outline-none cursor-pointer"
     onClick={onClick}
   >
-    <span className="text-lg font-semibold">
+    <span className={count?"text-lg font-semibold":"text-lg font-bold"}>
       {title} {count ? `(${count})` : ''}
     </span>
     <svg

@@ -8,7 +8,7 @@ import MenuSection from "./MenuSection";
 export const RestaurantMenu = () => {
   const { resId } = useParams();
   const resinfo = useRestaurantMenu(resId);
-  const [openSections, setOpenSections] = useState({});
+  const [openSections, setOpenSections] = useState({ 1: true });
 
   if (resinfo === null) {
     return <Shimmer />;
@@ -21,15 +21,16 @@ export const RestaurantMenu = () => {
     resinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   const handleToggle = (sectionIndex) => {
+
     setOpenSections((prevState) => ({
       ...prevState,
       [sectionIndex]: !prevState[sectionIndex],
     }));
   };
-
+console.log(">>",openSections)
   return resinfo?.cards?.length > 0 ? (
     <div className="menu container p-4 flex flex-col justify-center items-center">
-      <div className="w-[60%]">
+      <div className="w-[900px] ">
         <RestaurantInfo
           name={data?.name}
           cuisines={data?.cuisines}
