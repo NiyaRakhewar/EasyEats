@@ -23,7 +23,7 @@ const MenuSection = ({ section, sectionIndex, isOpen, onToggle }) => {
               {items
                 ? items?.map((item, itemIndex) => {
                     const itemData = item?.card?.info;
-
+                    const ratings = item?.card?.info?.ratings?.aggregatedRating;
                     return (
                       <li key={itemIndex} className="py-2 px-4 border-b">
                         <div className="flex justify-between">
@@ -47,26 +47,36 @@ const MenuSection = ({ section, sectionIndex, isOpen, onToggle }) => {
                               />
                             )}
                             <h3 className="text-slate-800">{itemData?.name}</h3>
-                            <h3>
+                            <h3 className="text-lg">
                               ₹{" "}
                               {Math.floor(
                                 (itemData?.defaultPrice || itemData?.price) /
                                   100
                               )}
                             </h3>
-
+                          { ratings?.rating && <h3 className="text-xs my-1">
+                              ⭐{ratings?.rating} ({ratings?.ratingCountV2})
+                            </h3>}
                             <ReadMore
                               text={itemData?.description}
                               maxCharacterCount={150}
                             />
                           </div>
-                          <div className="flex flex-col items-center justify-start w-[30%] ">
-                            <img
-                              className="rounded-lg w-[156px] h-[144px] object-cover mb-2 shadow-2xl"
-                              alt="img"
-                              src={FOOD_IMG + itemData?.imageId}
-                            />
-                            <button className="absolute mt-32 px-3 font-bold bg-slate-100 text-green-600 shadow-2xl border border-slate-300 rounded cursor-pointer">
+                          <div className="flex flex-col items-center justify-center w-[30%] ">
+                            {itemData?.imageId && (
+                              <img
+                                className="rounded-lg w-[156px] h-[144px] object-cover mb-2 shadow-2xl"
+                                alt="img"
+                                src={FOOD_IMG + itemData?.imageId}
+                              />
+                            )}
+                            <button
+                              className={
+                                itemData?.imageId
+                                  ? "absolute mt-32 px-3 font-bold bg-slate-100 text-green-600 shadow-2xl border border-slate-300 rounded cursor-pointer"
+                                  : " font-bold px-3 bg-slate-100 text-green-600 shadow-2xl border border-slate-300 rounded cursor-pointer"
+                              }
+                            >
                               ADD
                             </button>
                           </div>
