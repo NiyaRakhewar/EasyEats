@@ -6,6 +6,9 @@ import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
 export const Header = () => {
   const onlineStatus = useOnlineStatus();
   const [loginFlag, setLoginFlag] = useState(true);
+
+  console.log("renderrrr")
+
   return (
     <div className="fixed z-40 w-full flex justify-between bg-slate-50 dark:bg-slate-600 shadow-lg px-3">
       <div>

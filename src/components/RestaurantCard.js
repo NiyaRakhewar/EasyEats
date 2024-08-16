@@ -5,7 +5,7 @@ export const RestaurantCard = ({ restroData }) => {
 
 
   return (
-    <div className="w-[270px] h-[305px] m-2 border rounded-lg transform hover:scale-105 transition duration-300 ease-in-out hover:bg-gray-200 hover:shadow-xl shadow-lg">
+    <div className="w-[270px] h-[305px] m-2 border rounded-lg transform hover:scale-105 transition duration-300 ease-in-out  hover:shadow-xl shadow-lg">
       <h4 className="absolute mx-[240px] my-1 text-2xl shadow-2xl cursor-pointer  transform hover:scale-105 transition duration-300 ease-in-out "><IoHeartCircle fill="gray" /></h4>
      <img
         className="w-[270px] h-[180px] rounded-lg object-cover "
