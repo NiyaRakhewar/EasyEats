@@ -1,16 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LOGO from "../utils/assets/logo-food.png";
 import { Link } from "react-router-dom";
 import { useOnlineStatus } from "../utils/useOnlineStatus";
 import { HiOutlineStatusOnline, HiOutlineStatusOffline } from "react-icons/hi";
+import { UserContext } from "../utils/UserContext";
 export const Header = () => {
   const onlineStatus = useOnlineStatus();
   const [loginFlag, setLoginFlag] = useState(true);
 
-  console.log("renderrrr")
+  const data = useContext(UserContext)
+
+  console.log("data context", data)
 
   return (
-    <div className="fixed z-40 w-full flex justify-between bg-slate-50 dark:bg-slate-600 shadow-lg px-3">
+    <div className="fixed z-40 w-full flex justify-between bg-slate-50 shadow-lg px-3">
       <div>
         {/* <h4 className="w-50 h-50">🍜</h4> */}
         <Link to="/"><img
@@ -42,6 +45,7 @@ export const Header = () => {
           <h1 className="px-4 cursor-pointer" onClick={() => setLoginFlag(!loginFlag)}>
             {loginFlag ? " Login " : "Logout"}
           </h1>
+          <p>{data?.loggedInUser}</p>
         </ul>
       </div>
     </div>

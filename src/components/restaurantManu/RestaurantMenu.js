@@ -36,6 +36,7 @@ export const RestaurantMenu = () => {
             name={data?.name}
             cuisines={data?.cuisines}
             costForTwoMessage={data?.costForTwoMessage}
+            data={data}
           />
           <div>
             {menuSections?.map((section, sectionIndex) => (

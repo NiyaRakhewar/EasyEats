@@ -16,6 +16,7 @@ const MenuSection = ({ section, sectionIndex, isOpen, onToggle }) => {
           isOpen={isOpen}
           onClick={onToggle}
           title={sectionTitle}
+          count={items?.length}
         />
         {isOpen && (
           <div className="pl-4">
@@ -70,7 +71,7 @@ const MenuSection = ({ section, sectionIndex, isOpen, onToggle }) => {
                                 src={FOOD_IMG + itemData?.imageId}
                               />
                             )}
-                            <button
+                            <button 
                               className={
                                 itemData?.imageId
                                   ? "absolute mt-32 px-3 font-bold bg-slate-100 text-green-600 shadow-2xl border border-slate-300 rounded cursor-pointer"
