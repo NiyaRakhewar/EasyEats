@@ -19,11 +19,11 @@ const AppLayout = () => {
   useEffect(() => {
     //API Call
 
-    const data = {
-      name: "Jay",
-    };
+    // const data = {
+    //   name: "Jay",
+    // };
 
-    setUserName(data?.name);
+    // setUserName(data?.name);
   }, []);
 
   return (
